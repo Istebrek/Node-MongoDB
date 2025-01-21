@@ -20,7 +20,7 @@ app.post ("/blogpost", (req,res) => {
     res.send("This is a post request");
 });
 
-app.put("/api/product/:id", async (req, res) => {
+app.put("/api/product/:id", async (req, res) => { //detta är update metoden, delete liknar den
     try {
         const {id} = req.params;
         const product = await Product.findbyIdAndUpdate(id, req.body);
